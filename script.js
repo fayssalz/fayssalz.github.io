@@ -428,7 +428,8 @@ var Particle = function(canvas) {
     };
 };
 
-window.onload = function(){
+  function(){
+    document.getElementById("mp3").autoplay;
     document.getElementById("mp3").play();
     document.getElementById("mp3").volume = 0.2;
   };
