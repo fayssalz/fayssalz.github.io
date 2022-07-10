@@ -431,7 +431,7 @@ var Particle = function(canvas) {
 window.onload = function(){
     document.getElementById("mp3").play();
     document.getElementById("mp3").volume = 0.2;
-  }
+  };
 setTimeout(function() {
     Clock.init('canvas');
 }, 2000)
