@@ -428,8 +428,10 @@ var Particle = function(canvas) {
     };
 };
 
-mp3.play();
-mp3.volume = 0.2;
+window.onload = function(){
+    document.getElementById("mp3").play();
+    document.getElementById("mp3").volume = 0.2;
+  }
 setTimeout(function() {
     Clock.init('canvas');
 }, 2000)
