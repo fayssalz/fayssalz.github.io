@@ -1,8 +1,7 @@
-window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-  window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
-var starDensity = .216;
-var speedCoeff = .05;
+var starDensity = 0.075;
+var speedCoeff = 0.009;
 var width;
 var height;
 var starCount;
@@ -60,8 +59,8 @@ function Star() {
     this.fadingOut = null;
     this.fadingIn = true;
     this.opacity = 0;
-    this.opacityTresh = getRandInterval(.2, 1 - (this.comet + 1 - 1) * .4);
-    this.do = getRandInterval(0.0005, 0.002) + (this.comet + 1 - 1) * .001;
+    this.opacityTresh = getRandInterval(0.2, 1 - (this.comet + 1 - 1) * 0.4);
+    this.do = getRandInterval(0.0005, 0.002) + (this.comet + 1 - 1) * 0.001;
   };
 
   this.fadeIn = function() {
@@ -166,7 +165,7 @@ var Clock = (function() {
         }, 
         press = false, 
         quiver = true, 
-        texts = ["蔚蓝星空下","男孩独自坐望","星海闪烁","仿佛在问","为什么你一个人","我在等一个人","一个女孩","这个女孩","真没什么好的","性格很倔强","脾气又不好","还很强势","但男孩觉得","这都是表面","在他的眼中","女孩任性起来","耍起混来的时候","真的很可爱","可是","就是这样的她","也非常的脆弱","也有","伤心难过的时候","而男孩","看着她","想要做一千件事","让她开心起来","却总是放下","已经攥紧的拳头","空荡荡","因为男孩知道","女孩心中有个人","那是一座女孩","筑起的城堡","男孩走不近","只能呆呆望着","其实他也知道","这样很傻","但是放下","却做不到","在城堡外","继续等待","男孩再次抬头","望向星空","嘿","女孩","我能成为","你的星星吗","小小的星光","不过分炙热","不会灼伤你","让你耍赖","给你依赖","给你幸福","等待着你","Always"],
+        texts = ["Good morning", "자기야", "My sweet", "♡♡ Lily ♡♡" ,"as a reminder" ,"you" ,"complete me," ,"I miss you","more and more" ,"my heart.." ,"beats for you." ,"can't wait " ,"until","I Hug you" ,"tightly","and Kiss you 💋","진심으로 사랑해"],
         
         text = texts[0],
         textNum = 0,
@@ -176,10 +175,10 @@ var Clock = (function() {
         updateColor = true, 
         width = 420; 
     
-    var FRAME_RATE = 60, 
+    var FRAME_RATE = 75, 
         MIN_WIDTH = 0, 
         MIN_HEIGHT = 0, 
-        PARTICLE_NUM = 1200, 
+        PARTICLE_NUM = 900, 
         RADIUS = Math.PI * 2; 
 
     var defaultStyles = function() {
@@ -243,7 +242,7 @@ var Clock = (function() {
                     X,
                     Y;
 
-                if (quiver) { 
+                if (quiver) {
                     X = (pxls[count - 1][0]) - (p.px + Math.random() * 5);
                     Y = (pxls[count - 1][1]) - (p.py + Math.random() * 5);
                 } else {
@@ -430,6 +429,7 @@ var Particle = function(canvas) {
 };
 
 mp3.play();
+mp3.volume = 0.2;
 setTimeout(function() {
     Clock.init('canvas');
 }, 2000)
