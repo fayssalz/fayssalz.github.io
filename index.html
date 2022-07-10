@@ -132,34 +132,40 @@
             </div>
         </div>
     </div>
-    <audio id="mp3" loop autoplay >
-      <source src="./Euphoria.mp3" type="audio/mp3">
-  </audio>
 </body>
 
 </html>
 
   <script  src="./script.js"></script>
   <script>
-var play = true;
-
-var myAudio = document.getElementById("mp3");
-
+ var source = "./Euphoria.mp3";
+ var audio = document.createElement("audio");
+ //
+ audio.autoplay = true;
+ //
+ audio.load()
+ audio.addEventListener("load", function() { 
+     audio.play();
+ }, true);
+ audio.src = source;
+ audio.volume = 0.2;
+    
+ var play = true;
+    
 function onKeyDown(event) {
         switch (event.keyCode) {
             case 32: //SpaceBar                    
                 if (play) {
-                    myAudio.pause();
+                    audio.pause();
                     play = false;
                 } else {
-                    myAudio.play();
+                    audio.play();
                     play = true;
                 }
                 break;
         }
   return false;
 }
-
 window.addEventListener("keydown", onKeyDown, false);
 </script>
 
