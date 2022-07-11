@@ -92,6 +92,7 @@
                         <polygon points="47.666,31.168 4.7803,39.4023 4.251,37.4004 4.4429,36.1895 3.6465,35.1123 3.0142,32.7178 3.2754,32.1025
     2.7461,31.7046 2.2676,29.8945 45.9268,21.5107 46.0762,22.2007 45.9512,22.8423 46.2783,23.1372 46.6777,24.9795 46.5234,25.4795
     47.3027,27.8667 47.8086,30.2017   " />
+                        <polygon id="pause" points="20,31 33,18 16,11" style="fill:gray" onClick="togglePlay()"/>
                     </g>
                     <g id="boy_1_">
                         <g id="boy">
@@ -167,6 +168,10 @@ function onKeyDown(event) {
   return false;
 }
 window.addEventListener("keydown", onKeyDown, false);
+function togglePlay() {
+  return audio.paused ? audio.play() : audio.pause();
+};    
+    
 </script>
 
 </body>
