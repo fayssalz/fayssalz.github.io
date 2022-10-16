@@ -165,7 +165,7 @@ var Clock = (function() {
         }, 
         press = false, 
         quiver = true, 
-        texts = ["Good morning", "자기야", "My sweet", "♡♡ Lily ♡♡" ,"as a reminder" ,"you" ,"complete me," ,"I miss you","more and more" ,"my heart.." ,"beats for you." ,"can't wait " ,"until","I Hug you" ,"tightly","and Kiss you 💋","진심으로 사랑해"],
+        texts = ["hello", "sweetness", "as a reminder" ,"you" ,"complete me," ,"I miss you","Already" ,"yes already" ,"nah!" ,"that's cring" ,"as hell","just wanna say" ,"this is ","the HTML/JS","thing"],
         
         text = texts[0],
         textNum = 0,
