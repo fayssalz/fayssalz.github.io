@@ -165,7 +165,7 @@ var Clock = (function() {
         }, 
         press = false, 
         quiver = true, 
-        texts = ["darling Louisa","My sunshine", "my moonlight", "happy birthday" ,"my love" ,"you are:" ,"the poetry..","in my heart," ,"the rythme.." ,"to my heartbeat," ,"the melody.." ,"in my ears,","the beauty..." ,"in my eyes","you are ..","everything","to me ♡","I love you"," more then ..","words..","can say","HAPPY BIRTHDAY 🎂"],
+        texts = ["hello there ","welcome to my Github Page", "Enjoy"],
         
         text = texts[0],
         textNum = 0,
